@@ -1,5 +1,5 @@
-/* 
-    Copyright (C) Stevan Dedovic, Wesley Merkel 
+/*
+    Copyright (C) Stevan Dedovic, Wesley Merkel
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -61,5 +61,23 @@ h1 {
   from {
     color: #eeeeee;
     text-shadow: 3px 3px 7px #00000000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #202020;
+    color: #eeeeee;
+  }
+
+  .content {
+    text-shadow: 3px 3px 7px #eeeeee55;
+  }
+
+  @keyframes fade-in {
+    from {
+      color: #202020;
+      text-shadow: 3px 3px 7px #eeeeee00;
+    }
   }
 }
