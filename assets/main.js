@@ -52,7 +52,7 @@
 
     printWithProgress(
       25,
-      'People have been known to exchange money for goods and services.'
+      'We are not and never will be hiring.'
     )
   }
 
