@@ -35,7 +35,6 @@
 
   function rabbit_hole_start() {
     console.log("                     /\    .-' /")
-    console.log("                     /\    .-' /")
     console.log("                    /  ; .'  .' ")
     console.log("                   :   :/  .'   ")
     console.log("                    \  ;-.'     ")
