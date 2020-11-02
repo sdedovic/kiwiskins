@@ -51,7 +51,7 @@
 
     printWithProgress(
       25,
-      'We are not and never will be hiring.'
+      'We are not currently nor ever shall be hiring.'
     )
   }
 
