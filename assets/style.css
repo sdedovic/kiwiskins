@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #eeeeee;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 20vw;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.content {
+  animation-duration: 3s;
+  animation-name: fade-in;
+  animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  flex: none;
+  text-shadow: 3px 3px 7px #00000055;
+}
+
+@keyframes fade-in {
+  from {
+    color: #eeeeee;
+    text-shadow: 3px 3px 7px #00000000;
+  }
+}
