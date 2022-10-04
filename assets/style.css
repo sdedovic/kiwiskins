@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #7b6;
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -33,7 +33,12 @@ html, body {
 }
 
 h1 {
-  font-size: 20vw;
+  margin-top:7vh;
+  font-size: 8vw;
+}
+
+h2 {
+  font-size: 6vw;
 }
 
 .flex-container {
@@ -59,15 +64,15 @@ h1 {
 
 @keyframes fade-in {
   from {
-    color: #eeeeee;
+    color: #7b6;
     text-shadow: 3px 3px 7px #00000000;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   body {
-    background-color: #202020;
-    color: #eeeeee;
+    background-color: #7b6;
+    color: #7b5;
   }
 
   .content {
