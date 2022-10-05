@@ -39,6 +39,7 @@ h1 {
 
 h2 {
   font-size: 6vw;
+  margin-left: 5vw;
 }
 
 .flex-container {
@@ -55,34 +56,51 @@ h2 {
 }
 
 .content {
+  flex: none;
+  color: #7b6;
+  text-shadow: none;
+}
+
+.slide {
+  animation-duration: 3s;
+  animation-name: slide-in;
+  animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  animation-fill-mode: forwards;
+}
+
+.fade {
   animation-duration: 3s;
   animation-name: fade-in;
   animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
-  flex: none;
-  text-shadow: 3px 3px 7px #00000055;
+  animation-fill-mode: forwards;
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+
+.delay-2 {
+  animation-delay: 5s;
+}
+
+.delay-3 {
+  animation-delay: 6s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-900px);
+  }
+
+  to {
+    color: #000;
+    text-shadow: 13px 13px 17px #00000000;
+  }
 }
 
 @keyframes fade-in {
-  from {
-    color: #7b6;
-    text-shadow: 3px 3px 7px #00000000;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #7b6;
-    color: #7b5;
-  }
-
-  .content {
-    text-shadow: 3px 3px 7px #eeeeee55;
-  }
-
-  @keyframes fade-in {
-    from {
-      color: #202020;
-      text-shadow: 3px 3px 7px #eeeeee00;
-    }
+  to {
+    color: #000;
+    text-shadow: 13px 13px 17px #00000000;
   }
 }
