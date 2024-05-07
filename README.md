@@ -1,24 +1,11 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/sdedovic/are-we-json-yet/main/assets/preview.png?sanitize=true"
+    <img src="https://raw.githubusercontent.com/sdedovic/kiwiskins/main/assets/preview.png?sanitize=true"
         height="230">
 </p>
-<p align="center">
-    <a href="https://arewejsonyet.com" alt="Are We JSON Yet?">
-        <img src="https://img.shields.io/badge/Are%20We%20JSON%20Yet-Probably.-yellow" /></a>
-</p>
 
-This project tracks the progress of us becoming JSON. To see the latest status update, please go to
-
-**[arewejsonyet.com](http://www.arewejsonyet.com/)**
+**[kiwiskins.com](http://www.kiwiskins.com/)**
 
 ----
-
-To include the badge in your project, simply add this to the README:
-```markdown
-[![Are We JSON Yet?](https://img.shields.io/badge/Are%20We%20JSON%20Yet-Probably.-yellow)](http://www.arewejsonyet.com/)
-```
-
----
 
 Copyright (c) Stevan Dedovic, Wesley Merkel
 This program is free software: you can redistribute it and/or modify
