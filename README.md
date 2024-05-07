@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/sdedovic/kiwiskins/main/assets/preview.png?sanitize=true"
+    <img src="https://raw.githubusercontent.com/sdedovic/kiwiskins/master/assets/preview.png?sanitize=true"
         height="230">
 </p>
 
