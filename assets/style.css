@@ -26,6 +26,7 @@ html {
 body {
   background-color: #7b6;
   font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
 }
 
 html, body {
@@ -33,13 +34,17 @@ html, body {
 }
 
 h1 {
-  margin-top:7vh;
   font-size: 8vw;
+  margin-top:7vh;
 }
 
 h2 {
   font-size: 6vw;
   margin-left: 5vw;
+}
+
+h4 {
+  font-size: 2vw;
 }
 
 .flex-container {
@@ -113,6 +118,17 @@ h2 {
   }
 }
 
+/* footer */
+.footer {
+  height: 150px;
+  margin-top: auto;
+
+  a {
+    color: black;
+    font-size: 1.5vw;
+  }
+}
+
 /* Gallery */
 :root {
   --gallery-gap: 1.5em;
@@ -125,6 +141,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gallery-gap);
+  justify-content: center;
 }
 
 .img-gallery__item {
@@ -138,11 +155,15 @@ h2 {
           100% / var(--gallery-items-per-row) - var(--gallery-gap) *
           (var(--gallery-items-per-row) - 1) / var(--gallery-items-per-row)
   );
-  figure { margin: 0 }
+  figure {
+    margin: 0;
+    display: table;
+  }
 
   figcaption {
     margin-top: .5rem;
     font-weight: bold;
+    caption-side: bottom;
   }
 }
 
@@ -153,11 +174,11 @@ h2 {
 }
 @media only screen and (768px < width < 1024px) {
   .img-gallery {
-    --gallery-items-per-row: 3;
+    --gallery-items-per-row: 2;
   }
 }
 @media only screen and (540px < width < 768px) {
   .img-gallery {
-    --gallery-items-per-row: 3;
+    --gallery-items-per-row: 2;
   }
 }
