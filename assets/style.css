@@ -55,6 +55,14 @@ h2 {
   justify-content: center;
 }
 
+.flex-center.nav {
+  height: 150px;
+}
+
+.nav a {
+  color: black;
+}
+
 .content {
   flex: none;
   color: #7b6;
@@ -102,5 +110,54 @@ h2 {
   to {
     color: #000;
     text-shadow: 13px 13px 17px #00000000;
+  }
+}
+
+/* Gallery */
+:root {
+  --gallery-gap: 1.5em;
+  --gallery-item-border-radius: .4em;
+  --gallery-items-per-row: 1;
+}
+
+.img-gallery {
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gallery-gap);
+}
+
+.img-gallery__item {
+  img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: var(--gallery-item-border-radius);
+  }
+  flex: 0 0
+  calc(
+          100% / var(--gallery-items-per-row) - var(--gallery-gap) *
+          (var(--gallery-items-per-row) - 1) / var(--gallery-items-per-row)
+  );
+  figure { margin: 0 }
+
+  figcaption {
+    margin-top: .5rem;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (width >= 1024px) {
+  .img-gallery {
+    --gallery-items-per-row: 4;
+  }
+}
+@media only screen and (768px < width < 1024px) {
+  .img-gallery {
+    --gallery-items-per-row: 3;
+  }
+}
+@media only screen and (540px < width < 768px) {
+  .img-gallery {
+    --gallery-items-per-row: 3;
   }
 }
