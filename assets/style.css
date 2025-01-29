@@ -17,6 +17,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -26,7 +27,6 @@ html {
 body {
   background-color: #7b6;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
 }
 
 html, body {
@@ -36,7 +36,9 @@ html, body {
 h1 {
   font-size: 8vw;
   margin-top:7vh;
-}
+}.no-margin {
+  margin-top: 0;
+ }
 
 h2 {
   font-size: 6vw;
@@ -44,24 +46,26 @@ h2 {
 }
 
 h4 {
-  font-size: 2vw;
+  font-size: 1rem;
 }
 
 .flex-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 0 1rem;
 }
 
 .flex-center {
-  align-items: center;
   display: flex;
-  height: 100%;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 0;
 }
 
 .flex-center.nav {
-  height: 150px;
+  height: 100px;
 }
 
 .nav a {
@@ -120,65 +124,64 @@ h4 {
 
 /* footer */
 .footer {
-  height: 150px;
+  height: 100px;
+  padding-bottom: 1rem;
   margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
   a {
     color: black;
-    font-size: 1.5vw;
+    font-size: 0.8rem;
   }
 }
 
 /* Gallery */
-:root {
-  --gallery-gap: 1.5em;
-  --gallery-item-border-radius: .4em;
-  --gallery-items-per-row: 1;
-}
-
 .img-gallery {
-  margin: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gallery-gap);
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  /* ensure takes up remaining space */
+  flex: 1;
 }
 
-.img-gallery__item {
-  img {
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    border-radius: var(--gallery-item-border-radius);
-  }
-  flex: 0 0
-  calc(
-          100% / var(--gallery-items-per-row) - var(--gallery-gap) *
-          (var(--gallery-items-per-row) - 1) / var(--gallery-items-per-row)
-  );
-  figure {
-    margin: 0;
-    display: table;
-  }
-
-  figcaption {
-    margin-top: .5rem;
-    font-weight: bold;
-    caption-side: bottom;
-  }
+.img-gallery-item figure {
+  padding: 0;
+  display: table;
+  margin: 0 auto;
 }
 
-@media only screen and (width >= 1024px) {
-  .img-gallery {
-    --gallery-items-per-row: 4;
-  }
+.img-gallery-item img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 1%;
+  filter: drop-shadow(2.5px 5px 0.1rem #000000a0);
+
+  /* Limit image height to fit viewport */
+  max-height: calc(100vh - 5rem); /* accounts for header, footer, and padding */
+  margin: 0 auto;
+  /*display: block;*/
 }
-@media only screen and (768px < width < 1024px) {
-  .img-gallery {
-    --gallery-items-per-row: 2;
-  }
+
+.img-gallery-item figcaption {
+  padding: 0.75rem 0;
+  display: table-caption;
+  caption-side: bottom;
 }
-@media only screen and (540px < width < 768px) {
-  .img-gallery {
-    --gallery-items-per-row: 2;
+
+/* Optional: Add a max-width to prevent images from becoming too large */
+@media (min-width: 1200px) {
+  .img-gallery-item {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
